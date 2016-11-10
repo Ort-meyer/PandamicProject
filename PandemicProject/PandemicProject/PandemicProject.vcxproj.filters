@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{1d8a2cbb-81b4-436d-ad2b-8786480c0e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{51dd610f-f0de-4d8e-b0ba-5d58c5bcb754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS">
+      <UniqueIdentifier>{f9987823-b306-4ca6-9c07-021d4eac03ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Header">
+      <UniqueIdentifier>{f2730d2f-068c-4bf6-93dd-09284501b17c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Source">
+      <UniqueIdentifier>{ec6a8360-5870-4c34-a147-089f1752e563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS\Header">
+      <UniqueIdentifier>{6cc642fb-a0d9-4800-833b-98a26d696a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\Source">
+      <UniqueIdentifier>{b03774a1-143a-43dd-a5aa-ebdd4cc0fd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\Header">
+      <UniqueIdentifier>{9f998f16-2811-4be8-a56f-36ebd5a11b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS\Source">
+      <UniqueIdentifier>{7147c96e-b323-4664-ab73-39c9b708e55b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OSManager.cpp">
+      <Filter>OS\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OSManager.h">
+      <Filter>OS\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
