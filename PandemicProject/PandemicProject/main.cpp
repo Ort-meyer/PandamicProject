@@ -1,5 +1,6 @@
 #include <iostream>
 #include "OSManager.h"
+#include "GraphicsManager.h"
 #include <SDL\SDL.h>
 
 using namespace std;
@@ -15,7 +16,11 @@ int main(int numArgs, char * args[])
    t_params.winSizeX = 1920;
    t_params.winSizeY = 1080;
 
+   // This also initializes OSmanager by calling get. Important to do first
    OSManager::Get()->CreateWindow(t_params);
+   Graphics::GraphicsManager::Get();
 
+   int derp;
+   cin >> derp;
    return 0;
 }

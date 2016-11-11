@@ -48,10 +48,25 @@
     <ClCompile Include="OSManager.cpp">
       <Filter>OS\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicsManager.cpp">
+      <Filter>Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderHandler.cpp">
+      <Filter>Graphics\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OSManager.h">
       <Filter>OS\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsManager.h">
+      <Filter>Graphics\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderHandler.h">
+      <Filter>Graphics\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Graphics\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
