@@ -1,7 +1,11 @@
 #pragma once
+#include <vector>
 #include "GraphicsManager.h"
 #include "OSManager.h"
 #include "Player.h"
+#include "GameObject.h"
+
+using namespace std;
 class Game
 {
 public:
@@ -13,5 +17,6 @@ public:
 
 private:
    Player* m_player;
+   vector<GameObject> m_gameObjects;
 };
 

@@ -11,7 +11,7 @@ int main(int numArgs, char * args[])
    t_params.windowName = "Pandemic";
    t_params.argc = 0;
    t_params.argv = "";
-   t_params.winPosX = 100;
+   t_params.winPosX = 600;
    t_params.winPosY = 100;
    t_params.winSizeX = 1920;
    t_params.winSizeY = 1080;

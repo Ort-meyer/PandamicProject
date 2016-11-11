@@ -72,6 +72,9 @@
     <ClCompile Include="ObjLoader.cpp">
       <Filter>Graphics\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OSManager.h">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="ObjLoader.h">
       <Filter>Graphics\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

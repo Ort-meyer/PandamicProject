@@ -1,11 +1,17 @@
 #include "Player.h"
 #include "GraphicsManager.h"
 #include <glm\gtx\transform.hpp>
+#include <iostream>
+using namespace std;
 
 Player::Player()
 {
-   m_movementSpeed = 0.001f;
+   m_movementSpeed = 3;
    m_turnSpeed = 0.001f;
+
+   m_target = vec3(0, 0, 1);
+   m_position = vec3(0, 0, 0);
+   m_up = vec3(0, 1, 0);
 }
 
 
@@ -66,6 +72,7 @@ void Player::Update(float p_dt)
    // Store results
    m_target = vec3(t_target4);
    m_up = vec3(t_up4);
+
 
    Graphics::GraphicsManager::Get()->SetCameraMatrix(m_position, m_target, m_up);
 
