@@ -2,7 +2,7 @@
 #include "OSManager.h"
 #include "GraphicsManager.h"
 #include <SDL\SDL.h>
-
+#include "Game.h"
 using namespace std;
 
 int main(int numArgs, char * args[])
@@ -18,7 +18,12 @@ int main(int numArgs, char * args[])
 
    // This also initializes OSmanager by calling get. Important to do first
    OSManager::Get()->CreateWindow(t_params);
+   // This inits graphics
    Graphics::GraphicsManager::Get();
+
+   Game game;
+   game.Startup();
+   game.Run();
 
    int derp;
    cin >> derp;

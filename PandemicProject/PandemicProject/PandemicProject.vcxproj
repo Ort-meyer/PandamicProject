@@ -124,14 +124,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GraphicsManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjLoader.cpp" />
     <ClCompile Include="OSManager.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="ShaderHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GraphicsManager.h" />
+    <ClInclude Include="ObjLoader.h" />
     <ClInclude Include="OSManager.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="ShaderHandler.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>

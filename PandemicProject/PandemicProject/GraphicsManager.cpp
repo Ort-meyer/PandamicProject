@@ -3,8 +3,9 @@
 #include <iostream>
 #include <SOIL\SOIL.h>
 #include "Vertex.h"
+#include "ObjLoader.h"
 
-
+#include <glm\gtx\transform.hpp>
 namespace Graphics
 {
    using namespace GraphicsInternal;
@@ -34,7 +35,7 @@ namespace Graphics
          size_t t_numMatrices = it->second.size();
          for (size_t i = 0; i < t_numMatrices; i++)
          {
-            mat4x4 mvp = m_cameraMatrix * it->second.at(i).world;
+            mat4x4 mvp = m_projectionMatrix * m_cameraMatrix * it->second.at(i).world;
             GLuint mvpHandle = glGetUniformLocation(t_shaderProgram, "MVP");
             glUniformMatrix4fv(mvpHandle, 1, GL_FALSE, &mvp[0][0]);
             GLuint samplerHandle = glGetUniformLocation(t_shaderProgram, "sampler");
@@ -89,6 +90,12 @@ namespace Graphics
       return r_positionBuffer;
    }
 
+   GLuint GraphicsManager::CreateMesh(const char * p_fileName)
+   {
+      ObjLoader objLoader;
+      return CreateMesh(objLoader.LoadModel(p_fileName));
+   }
+
    GLuint GraphicsManager::CreateTexture(const char * p_fileName)
    {
       // Let soil do all the work
@@ -105,10 +112,17 @@ namespace Graphics
 
    void GraphicsManager::SetCameraMatrix(mat4x4 p_newMatrix)
    {
+      m_cameraMatrix = p_newMatrix;
    }
 
    void GraphicsManager::SetCameraMatrix(vec3 p_position, vec3 p_target, vec3 p_up)
    {
+      m_cameraMatrix = lookAt(p_position, p_position + p_target, p_up);
+   }
+
+   void GraphicsManager::SetCameraProjection(mat4x4 p_projection)
+   {
+      m_projectionMatrix = p_projection;
    }
 
 

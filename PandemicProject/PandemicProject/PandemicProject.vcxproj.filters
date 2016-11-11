@@ -40,6 +40,15 @@
     <Filter Include="OS\Source">
       <UniqueIdentifier>{7147c96e-b323-4664-ab73-39c9b708e55b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{91caa39f-e458-49b1-9f12-2f349efc2120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header">
+      <UniqueIdentifier>{b2fc286d-ed75-47f5-9c8d-a099b65426fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source">
+      <UniqueIdentifier>{1e06dd10-e245-4e6e-958e-0e813be821d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,6 +63,15 @@
     <ClCompile Include="ShaderHandler.cpp">
       <Filter>Graphics\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjLoader.cpp">
+      <Filter>Graphics\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OSManager.h">
@@ -66,6 +84,15 @@
       <Filter>Graphics\Header</Filter>
     </ClInclude>
     <ClInclude Include="Vertex.h">
+      <Filter>Graphics\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjLoader.h">
       <Filter>Graphics\Header</Filter>
     </ClInclude>
   </ItemGroup>
