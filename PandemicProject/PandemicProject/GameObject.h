@@ -1,5 +1,7 @@
 #pragma once
 #include <glm\glm.hpp>
+
+#include <PhysX\PxPhysicsAPI.h>
 using namespace glm;
 class GameObject
 {
@@ -15,5 +17,6 @@ private:
 
    unsigned int m_modelID;
    unsigned int m_textureID;
+
 };
 

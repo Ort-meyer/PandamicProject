@@ -75,6 +75,9 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
+    <ClCompile Include="PhysXManager.cpp">
+      <Filter>Physics\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OSManager.h">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Game\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysXManager.h">
+      <Filter>Physics\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

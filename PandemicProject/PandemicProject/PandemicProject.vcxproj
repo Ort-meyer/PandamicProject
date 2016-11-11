@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjLoader.cpp" />
     <ClCompile Include="OSManager.cpp" />
+    <ClCompile Include="PhysXManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ShaderHandler.cpp" />
   </ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="GraphicsManager.h" />
     <ClInclude Include="ObjLoader.h" />
     <ClInclude Include="OSManager.h" />
+    <ClInclude Include="PhysXManager.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="ShaderHandler.h" />
     <ClInclude Include="Vertex.h" />

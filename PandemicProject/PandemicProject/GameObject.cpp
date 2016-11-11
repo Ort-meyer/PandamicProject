@@ -10,7 +10,6 @@ GameObject::GameObject()
 GameObject::GameObject(vec3 p_position, vec3 p_target, vec3 p_up, unsigned int p_modelID, unsigned int p_textureID)
    :m_position(p_position), m_target(p_target), m_up(p_up), m_modelID(p_modelID), m_textureID(p_textureID)
 {
-
 }
 
 

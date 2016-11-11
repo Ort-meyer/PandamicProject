@@ -4,9 +4,7 @@
 #include "OSManager.h"
 #include "Player.h"
 #include "GameObject.h"
-
-// The fun stuff
-#include <PhysX\PxPhysicsAPI.h>
+#include "PhysXManager.h"
 
 using namespace std;
 using namespace physx;
@@ -24,11 +22,7 @@ private:
    vector<GameObject> m_gameObjects;
 
    // Uper physx stuff
-   PxFoundation* m_physxFoundation;
-   PxPhysics* m_physics;
-   PxScene* m_worldScene;
-   PxDefaultCpuDispatcher* m_cpuDispatcher;
-   
+
    
 };
 

@@ -2,6 +2,7 @@
 
 #include <glm\gtx\transform.hpp>
 
+#include "PhysXManager.h"
 
 Game::Game()
 {
@@ -20,21 +21,8 @@ void Game::Startup()
 
 
    /// Create PhysX
-   static PxDefaultErrorCallback gDefaultErrorCallback;
-   static PxDefaultAllocator gDefaultAllocatorCallback;
-   m_physxFoundation = PxCreateFoundation(PX_PHYSICS_VERSION, gDefaultAllocatorCallback, gDefaultErrorCallback);
-   m_physics = PxCreatePhysics(PX_PHYSICS_VERSION, *m_physxFoundation, PxTolerancesScale());
-   m_cpuDispatcher = PxDefaultCpuDispatcherCreate(2); // This, I don't remember
-   // Create world scene
-   PxSceneDesc t_sceneDesc(m_physics->getTolerancesScale());
-   t_sceneDesc.gravity = PxVec3(0, -9.81, 0);
-   t_sceneDesc.cpuDispatcher = m_cpuDispatcher;
-   t_sceneDesc.filterShader = PxDefaultSimulationFilterShader;
-   m_worldScene = m_physics->createScene(t_sceneDesc);
+   Physics::PhysXManager::Get(); // Initializes physx. Should probably have its own startup method...
 
-   PxMaterial* t_groundMaterial = m_physics->createMaterial(0.5, 0.5, 0.6);
-   PxRigidStatic* t_groundPlane = PxCreatePlane(*m_physics, PxPlane(0, 1, 0, 0), *t_groundMaterial);
-   m_worldScene->addActor(*t_groundPlane);;
 
 
    m_player = new Player();
@@ -66,8 +54,7 @@ void Game::Run()
 
 
       /// Simulate physics
-      m_worldScene->simulate(t_dt);
-      m_worldScene->fetchResults(true);
+      Physics::PhysXManager::Get()->Update(t_dt);
 
 
       for (size_t i = 0; i < m_gameObjects.size(); i++)
