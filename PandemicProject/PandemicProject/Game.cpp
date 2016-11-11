@@ -34,7 +34,7 @@ void Game::Startup()
    unsigned int textureID = Graphics::GraphicsManager::Get()->CreateTexture("../resources/textures/one.jpg");
 
    /// Create some world objects
-   m_gameObjects.push_back(GameObject(vec3(0, 0, 100), vec3(0, 0, 1), vec3(0, 1, 0), 1, 1));
+   m_gameObjects.push_back(GameObject(vec3(0, 10, 100), vec3(0, 0, 1), vec3(0, 1, 0), 1, 1));
 }
 
 
@@ -57,8 +57,11 @@ void Game::Run()
       Physics::PhysXManager::Get()->Update(t_dt);
 
 
+      /// Add stuff to draw list
       for (size_t i = 0; i < m_gameObjects.size(); i++)
       {
+         // Update from simulation results first
+         m_gameObjects.at(i).UpdatePositionFromPhysics();
          m_gameObjects.at(i).Draw();
       }
 

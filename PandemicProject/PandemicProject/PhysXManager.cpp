@@ -27,13 +27,14 @@ namespace Physics
       m_cpuDispatcher = PxDefaultCpuDispatcherCreate(2); // This, I don't remember
                                                          // Create world scene
       PxSceneDesc t_sceneDesc(m_physics->getTolerancesScale());
-      t_sceneDesc.gravity = PxVec3(0, -9.81, 0);
+      //t_sceneDesc.gravity = PxVec3(0, -9.81, 0);
+      t_sceneDesc.gravity = PxVec3(0, -2, 0);
       t_sceneDesc.cpuDispatcher = m_cpuDispatcher;
       t_sceneDesc.filterShader = PxDefaultSimulationFilterShader;
       m_worldScene = m_physics->createScene(t_sceneDesc);
 
       PxMaterial* t_groundMaterial = m_physics->createMaterial(0.5, 0.5, 0.6);
-      PxRigidStatic* t_groundPlane = PxCreatePlane(*m_physics, PxPlane(0, 1, 0, 0), *t_groundMaterial);
+      PxRigidStatic* t_groundPlane = PxCreatePlane(*m_physics, PxPlane(0, 1, 0, 40), *t_groundMaterial);
       m_worldScene->addActor(*t_groundPlane);;
    }
 
